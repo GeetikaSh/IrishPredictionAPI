@@ -24,3 +24,4 @@ The min purpose of this project was to built an API on **FastAPI** to classify t
 |--svm_irish_pipeline.pkl #Pre-trained SVM model
 |--requirements.txt # Python dependencies
 |--README.md # Project documentation
+|--streamlit webapp
