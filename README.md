@@ -20,8 +20,21 @@ The min purpose of this project was to built an API on **FastAPI** to classify t
 ---
 
 ## Project Structure
-|--app.py #FastAPI application\
-|--svm_irish_pipeline.pkl #Pre-trained SVM model\
-|--requirements.txt # Python dependencies\
-|--README.md # Project documentation\
-|--streamlit webapp
+├── app.py # FastAPI application serving prediction API\
+├── streamlit_app.py # Streamlit frontend application\
+├── pipeline/\
+│ └── svm_irish_pipeline.pkl # Pre-trained ML model pipeline\
+├── requirements.txt # Python dependencies\
+├── Dockerfile # Docker configuration to build combined app container\
+└── README.md # This file\
+
+## Running with Docker (Recommended)
+
+### Build Docker Image
+```bash
+docker build --no-cache -t iris-combined .
+```
+### Run Docker Container
+```bash
+docker run -p 8000:8000 -p 8501:8501 iris-combined
+```
