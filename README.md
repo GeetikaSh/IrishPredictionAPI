@@ -14,10 +14,6 @@ The min purpose of this project was to built an API on **FastAPI** to classify t
 - **Predicts Iris species label (`0`, `1`, or `2`)**
 
 ---
-## To Do
-- Map Predicted Iris Species Labels '1', '2', '3' to the original Iris Species Labels.
-
----
 
 ## Project Structure
 |--app.py #FastAPI application\
