@@ -11,7 +11,7 @@ The min purpose of this project was to built an API on **FastAPI** to classify t
 - Trained on the Iris dataset using SVM
 - Accepts real-time input for sepal and petal measurements
 - Pre-trained model serialized with `joblib`
-- **Predicts Iris species label (`0`, `1`, or `2`)**
+- **Predicts Iris species label     0: 'Iris-setosa', 1: 'Iris-versicolor', 2: 'Iris-virginica'**
 
 ---
 
@@ -22,7 +22,7 @@ The min purpose of this project was to built an API on **FastAPI** to classify t
 │ └── svm_irish_pipeline.pkl # Pre-trained ML model pipeline\
 ├── requirements.txt # Python dependencies\
 ├── Dockerfile # Docker configuration to build combined app container\
-└── README.md # This file\
+└── README.md # This file
 
 ## Running with Docker (Recommended)
 
