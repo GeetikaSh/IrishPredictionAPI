@@ -1,18 +1,19 @@
-# Use a lightweight Python base image
+# Use slim python image
 FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /app
 
-# Copy app files
-COPY . /app
+# Copy requirements and install
+COPY requirements.txt .
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Install dependencies
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+# Copy rest of the app
+COPY . .
 
-# Expose the FastAPI port (e.g., 8000)
+# Expose Streamlit port (8501) and FastAPI port (8000)
+EXPOSE 8501
 EXPOSE 8000
 
-# Run your FastAPI app (edit this based on your entry point)
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+# Start both FastAPI and Streamlit using a shell script
+CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port 8000 & streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0"]
