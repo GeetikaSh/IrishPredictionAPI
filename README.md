@@ -2,7 +2,7 @@
 
 The min purpose of this project was to built an API on **FastAPI** to classify the Irish Species, which serves predictions using the pre-trained **Support Vector Machine (SVM)** model.
 
-[Link of Kaggle Notebook for trained model and data](https://www.kaggle.com/code/sharmageetika/iris-prediction-with-fast-api?scriptVersionId=243951941)
+[Link of Kaggle Notebook for trained model and data](https://www.kaggle.com/code/sharmageetika/iris-prediction-with-fast-api)
 
 ---
 
